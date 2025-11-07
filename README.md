@@ -10,6 +10,18 @@ This project is designed to be developed and run on **Databricks Free Edition**,
 - Access to this GitHub repository
 - A small all-purpose cluster (DBR runtime with Python + SQL)
 
+### Databricks Free Edition Setup (Serverless)
+
+The Databricks Free Edition uses **serverless compute**, so you do not need to create or attach clusters manually.
+
+To confirm everything is ready:
+
+1. Open your workspace.
+2. Create a new notebook (Python or SQL).
+3. Run a simple test cell:
+   ```python
+   print("Databricks serverless compute is running!")
+
 ### 1. Connect Databricks to GitHub
 
 1. In the Databricks UI, click your **user icon → Settings**.
