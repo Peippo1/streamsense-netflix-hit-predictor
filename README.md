@@ -39,5 +39,15 @@ To confirm everything is ready:
 2. Click **New → Git folder** (or **Repo** depending on UI).
 3. For the **Git URL**, paste:
 
-   ```text
    https://github.com/Peippo1/streamsense-netflix-hit-predictor.git
+
+
+## Data source & license
+
+This project uses the **"Netflix Data"** dataset by **Rohit Grewal** on Kaggle.
+
+- Dataset: https://www.kaggle.com/datasets/rohitgrewal/netflix-data
+- License (as listed on Kaggle): Open Database License (ODbL) style terms
+
+The raw dataset is **not** included in this repository.  
+To reproduce the results, please download it directly from Kaggle and upload it to your own Databricks workspace.
