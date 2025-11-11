@@ -120,4 +120,5 @@ By the end of this workflow, StreamSense delivers:
 ## Final Note
 
 This project was developed for the Databricks Free Edition Hackathon, showcasing what’s possible with open data and accessible cloud AI tooling.  
+
 It’s designed to be fully portable and reproducible — requiring no paid compute, just a free Databricks account.
