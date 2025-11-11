@@ -181,6 +181,24 @@ Optionally, these can be converted into a Databricks dashboard view for presenta
 
 ---
 
+## Visual Highlights
+
+Below are key visuals generated from Notebook 04 (`hit_predictor_demo`), illustrating the data patterns and model insights behind StreamSense.
+
+![Hit rate by category](docs/hit_rate_by_category.png)
+*Figure 1: Hit rate distribution across Movies and TV Shows.*
+
+![Hit rate by rating](docs/hit_rate_by_rating.png)
+*Figure 2: Relationship between audience rating and predicted hit probability.*
+
+![Hit rate over release year](docs/hit_rate_by_year.png)
+*Figure 3: Trend showing how hit rates evolve over time.*
+
+![Feature importance](docs/feature_importance.png)
+*Figure 4: Top 15 most influential features driving model predictions.*
+
+---
+
 ## Final Note
 
 This project was developed for the Databricks Free Edition Hackathon, showcasing what’s possible with open data and accessible cloud AI tooling.  
