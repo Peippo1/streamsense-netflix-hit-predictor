@@ -107,81 +107,18 @@ To reproduce results, download it from Kaggle and upload it to your own Databric
 
 ---
 
-## Usage
+## Outcome
 
-To reproduce or explore StreamSense:
-
-1. Clone this repository into Databricks as a Git folder.
-2. Download the Netflix dataset from [Kaggle](https://www.kaggle.com/datasets/rohitgrewal/netflix-data) and upload it to your workspace under:
-   ```
-   /Volumes/workspace/my_catalog/my_volume/Netflix Dataset.csv
-   ```
-3. Run the notebooks in order:
-
-   1. `01_data_ingestion_exploration`
-   2. `02_feature_engineering_and_labels`
-   3. `03_modelling_and_evaluation`
-   4. `04_hit_predictor_demo`
-
-Each notebook builds upon the previous one to take you from raw data to an interactive model demo.
-
-### Example: What-If prediction
-
-In `04_hit_predictor_demo`, you can generate a prediction for a new, hypothetical title using:
-
-```python
-predict_hit_probability(
-    category="Movie",
-    rating="TV-MA",
-    release_year=2024,
-    duration_num=110,
-    is_movie=1,
-    country="United States"
-)
-```
-
-Example output:
-```
-Predicted hit probability: 0.76
-```
-
----
-
-## Results & Insights
-
-The baseline Random Forest model achieves balanced performance across metrics and reveals several patterns in the dataset:
-
-| Metric | Score |
-|---------|--------|
-| Accuracy | ~0.78 |
-| Precision | ~0.75 |
-| Recall | ~0.79 |
-| F1-Score | ~0.77 |
-| ROC-AUC | ~0.80 |
-
-### Key observations
-
-- **Movies released after 2020** show a slightly higher predicted hit probability, likely due to modern content patterns.  
-- **TV-MA-rated titles** trend toward stronger hit potential compared to family-rated titles.  
-- **Feature importance analysis** highlights:
-  - `description_length` (proxy for content richness)
-  - `release_year`
-  - `rating`
-  - `category`
-  as primary predictors of success.
-
-### Visual summary
-
-Notebook 04 includes visual breakdowns such as:
-- Hit rate by release year (trend line)
-- Hit rate by rating category
-- Feature importance ranking
-
-Optionally, these can be converted into a Databricks dashboard view for presentation or submission.
+By the end of this workflow, StreamSense delivers:
+- A reproducible AI pipeline from raw data to predictions  
+- A model capable of estimating hit probability for new Netflix titles  
+- Visual insights that explain content trends and model reasoning  
+- Full experiment tracking and model versioning with MLflow  
 
 ---
 
 ## Final Note
 
 This project was developed for the Databricks Free Edition Hackathon, showcasing what’s possible with open data and accessible cloud AI tooling.  
+
 It’s designed to be fully portable and reproducible — requiring no paid compute, just a free Databricks account.
