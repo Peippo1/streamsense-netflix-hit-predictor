@@ -1,0 +1,49 @@
+{
+  "datasets": [
+    {
+      "name": "132e7cf2",
+      "displayName": "Hit rate by category",
+      "queryLines": [
+        "SELECT category, hit_rate, count\n",
+        "FROM streamsense_hit_by_category\n",
+        "ORDER BY hit_rate DESC;"
+      ],
+      "catalog": "workspace",
+      "schema": "default"
+    },
+    {
+      "name": "b02ab966",
+      "displayName": "Hit rate by rating",
+      "queryLines": [
+        "SELECT rating, hit_rate, count\n",
+        "FROM streamsense_hit_by_rating\n",
+        "ORDER BY hit_rate DESC;"
+      ]
+    },
+    {
+      "name": "f1bef92e",
+      "displayName": "Hit rate by year",
+      "queryLines": [
+        "SELECT release_year, hit_rate, count\n",
+        "FROM streamsense_hit_by_year\n",
+        "ORDER BY release_year;"
+      ]
+    }
+  ],
+  "pages": [
+    {
+      "name": "dd82f317",
+      "displayName": "Untitled page",
+      "pageType": "PAGE_TYPE_CANVAS"
+    }
+  ],
+  "uiSettings": {
+    "theme": {
+      "widgetHeaderAlignment": "ALIGNMENT_UNSPECIFIED"
+    },
+    "genieSpace": {
+      "isEnabled": false
+    },
+    "applyModeEnabled": false
+  }
+}
