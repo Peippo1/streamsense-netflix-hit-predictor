@@ -1,0 +1,2 @@
+"""StreamSense shared helpers."""
+
