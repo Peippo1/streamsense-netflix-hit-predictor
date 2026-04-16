@@ -7,11 +7,17 @@ paths, feature lists, and repeated ML logic in one place.
 from __future__ import annotations
 
 from pathlib import Path
-from typing import Mapping, Sequence
+from typing import Any, Mapping, Sequence, TYPE_CHECKING
 
 import pandas as pd
-from pyspark.sql import DataFrame as SparkDataFrame
-from pyspark.sql import functions as F
+
+try:
+    from pyspark.sql import DataFrame as SparkDataFrame
+except ModuleNotFoundError:  # pragma: no cover - lets local smoke tests run without Spark
+    SparkDataFrame = Any  # type: ignore[assignment]
+
+if TYPE_CHECKING:
+    from pyspark.sql import DataFrame as SparkDataFrame
 
 DEFAULT_DATA_PATH = "dbfs:/Volumes/workspace/my_catalog/my_volume/Netflix Dataset.csv"
 RAW_TABLE_NAME = "netflix_raw"
@@ -103,6 +109,8 @@ def hit_rate_table(
     sort_descending: bool = True,
 ) -> SparkDataFrame:
     """Compute a count + hit-rate aggregation for a Spark dataframe."""
+
+    from pyspark.sql import functions as F
 
     table = (
         df_spark.groupBy(group_col)
