@@ -6,6 +6,13 @@ This notebook provides the final, demo-ready stage of the **StreamSense** pipeli
 
 It also includes supporting visual insights, feature importance analysis, and reusable Delta tables for dashboarding.
 
+## Reproducibility
+
+- Install the local Python dependencies with `pip install -r requirements.txt`
+- Run the notebooks in a Spark-enabled environment such as Databricks
+- Shared constants and helper logic now live in `streamsense/notebook_utils.py`
+- The `is_hit` target in Notebook 02 is still a demo heuristic, not a ground-truth popularity label
+
 ---
 
 ## 🎯 Objective
